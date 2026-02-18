@@ -6,3 +6,6 @@ output/
 config.yaml
 config.yaml.bak
 .DS_Store
+
+config.yaml
+config.yaml.bak
