@@ -1,0 +1,18 @@
+csv:
+  input_dir: "input"
+  normalized_path: "output/normalized_all.csv"
+  summary_path: "output/summary_all.csv"
+  errors_path: "output/errors_all.csv"
+
+web:
+  url: "file:///Users/chibasatsu/portfolio_automation/test_page.html"
+  snapshot_path: "data/page_snapshot.txt"
+  price_snapshot_path: "data/price_snapshot.txt"
+
+slack:
+  webhook_url: "https://hooks.slack.com/services/XXXX/XXXX/XXXX"
+
+github:
+  url: "https://gist.githubusercontent.com/Hayate-engineer/55afdcf2f4c81845ddaf34905372985a/raw/watch_target.txt"
+  snapshot_path: "data/github_snapshot.txt"
+  value_snapshot_path: "data/github_price_snapshot.txt"
