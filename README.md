@@ -1,21 +1,29 @@
 # 🔔 Web Price Monitor & Slack Automation
 
-WebページやGitHub RAWファイルの価格変更を検知し、
-Slackへ自動通知するPython製の自動監視ツールです。
+価格確認作業を自動化し、
+変更時のみSlackへ通知する実務想定の監視ツールです。
 
 ---
 
-## ✨ 主な機能
+## 🎯 できること
 
-- Webページ価格変更検知
+- Webページ価格の自動検知
 - GitHub RAWファイル監視
-- CSV正規化・集計
-- 差額自動計算
-- Slack自動通知
+- 前回値との差額算出（+◯◯円表示）
+- 変更時のみSlack通知
+- CSV正規化・集計・エラー抽出
 
 ---
 
-## 🧠 技術スタック
+## 📨 Slack通知イメージ
+
+<p align="center">
+  <img src="docs/slack_notification.png" width="600">
+</p>
+
+---
+
+## 🛠 技術スタック
 
 - Python 3.11+
 - requests
@@ -24,14 +32,25 @@ Slackへ自動通知するPython製の自動監視ツールです。
 
 ---
 
-## 🚀 Cursorでの起動手順
-
-1. このリポジトリをClone
-2. Cursorで開く
-3. ターミナルで以下を実行：
+## 🚀 Cursorでの起動方法
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # Mac
+source .venv/bin/activate
 pip install -r requirements.txt
 cp config.example.yaml config.yaml
+
+---
+
+## 💼 想定活用シーン
+
+- EC価格監視
+- 競合価格チェック
+- 在庫更新監視
+- 業務効率化の自動化案件
+
+---
+
+## 🔐 セキュリティ
+
+- WebhookはGit管理外（config.yamlはignore済）
